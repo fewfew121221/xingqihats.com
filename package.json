@@ -5,6 +5,8 @@
   "scripts": {
     "build": "node scripts/build-site.mjs",
     "deploy": "node scripts/deploy-vercel.mjs",
+    "deploy:aliyun": "node scripts/deploy-aliyun.mjs",
+    "ship": "node scripts/ship.mjs",
     "preview": "npm run build",
     "serve": "node scripts/serve-site.mjs",
     "cards": "node scripts/generate-publish-cards.mjs",

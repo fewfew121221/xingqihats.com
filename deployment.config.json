@@ -1,7 +1,23 @@
 {
   "target_site": "https://www.xingqihats.com/",
-  "github_repository_url": "https://github.com/你的账号/xingqi-hats-site",
+  "github_repository_url": "https://github.com/xingqi-hats/xingqi-hats-site.git",
   "vercel_project": "xingqi-hats-site",
   "production_output_directory": "site",
-  "automation_flow": ["content update", "git commit", "git push", "Vercel deploy", "live website"]
+  "aliyun": {
+    "host_env": "ALIYUN_HOST",
+    "user_env": "ALIYUN_USER",
+    "app_dir_env": "ALIYUN_APP_DIR",
+    "key_env": "ALIYUN_KEY",
+    "restart_command_env": "ALIYUN_RESTART_CMD",
+    "non_interactive": true
+  },
+  "automation_flow": [
+    "content update",
+    "npm run build",
+    "git commit",
+    "git push",
+    "Vercel deploy",
+    "ssh Aliyun rebuild",
+    "live website"
+  ]
 }
