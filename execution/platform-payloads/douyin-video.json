@@ -1,0 +1,18 @@
+{
+  "id": "xq-douyin-001",
+  "platform": "douyin",
+  "type": "video_script",
+  "title": "直播卖帽子，供应链要看这3点",
+  "content": "开头3秒：直播卖帽子，不是找低价就够了。正文：第一看价格带，3-8元适合福利款和引流款；第二看库存，爆单后能不能补货；第三看发货，常规现货能不能48小时内发出。结尾：需要直播帽子货盘，评论“直播”。",
+  "status": "pending",
+  "publish_mode": "manual",
+  "cover_text": "直播帽子货源3点",
+  "tags": ["直播帽子", "帽子货源", "帽子供应链", "48小时发货"],
+  "publish_note": "发布前上传实拍视频素材：帽子货架、多款展示、仓库分拣、快递打包。",
+  "seo": {
+    "keywords": ["直播供货帽子", "帽子供应链", "帽子工厂"],
+    "description": "解释直播帽子供应链的价格带、库存和48小时发货能力。"
+  },
+  "review": true,
+  "action": "approve / reject"
+}
