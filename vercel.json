@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "xingqi-hats-site",
+  "buildCommand": "npm run build",
+  "outputDirectory": "site",
+  "cleanUrls": false,
+  "trailingSlash": false
+}

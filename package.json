@@ -1,0 +1,25 @@
+{
+  "name": "xingqi-content-publisher",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "deploy": "node scripts/deploy-vercel.mjs",
+    "preview": "npm run build",
+    "serve": "node scripts/serve-site.mjs",
+    "cards": "node scripts/generate-publish-cards.mjs",
+    "daily": "node scripts/daily-publish-table.mjs",
+    "mock:publish": "node scripts/mock-playwright-publish.mjs",
+    "generate": "node scripts/generate-content.mjs",
+    "site:faq": "node scripts/generate-faq-page.mjs",
+    "queue:build": "node scripts/build-execution-queue.mjs",
+    "queue:approve": "node scripts/review-queue.mjs approve",
+    "queue:reject": "node scripts/review-queue.mjs reject",
+    "execute": "node scripts/execution-engine.mjs",
+    "publish:cms": "node scripts/publish-cms-api.mjs",
+    "publish:playwright": "node scripts/publish-playwright.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0"
+  }
+}

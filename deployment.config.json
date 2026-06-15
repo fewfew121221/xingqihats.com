@@ -1,0 +1,7 @@
+{
+  "target_site": "https://www.xingqihats.com/",
+  "github_repository_url": "https://github.com/你的账号/xingqi-hats-site",
+  "vercel_project": "xingqi-hats-site",
+  "production_output_directory": "site",
+  "automation_flow": ["content update", "git commit", "git push", "Vercel deploy", "live website"]
+}
