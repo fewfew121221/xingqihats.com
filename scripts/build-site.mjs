@@ -17,11 +17,13 @@ const brand = {
 const pageSources = {
   "index.html": { source: "homepage.json", nav: "首页", label: "公司介绍" },
   "products.html": { source: "products.json", nav: "产品", label: "帽子产品分类页" },
-  "supply-chain.html": { source: "homepage.json", nav: "供应链", label: "300+工厂供应链能力", focus: "supply-chain" },
-  "oem-odm.html": { source: "products.json", nav: "OEM/ODM", label: "OEM/ODM定制能力", focus: "oem" },
+  "supply-chain.html": { source: "homepage.json", nav: "供应链", label: "300+工厂供应链能力", focus: "supply-chain", displayTitle: "300+合作工厂供应链能力" },
+  "oem-odm.html": { source: "products.json", nav: "OEM/ODM", label: "OEM/ODM定制能力", focus: "oem", displayTitle: "OEM/ODM帽子定制能力" },
   "faq.html": { source: "faq.json", nav: "采购问答", label: "采购问答知识库" },
-  "logistics.html": { source: "homepage.json", nav: "物流", label: "48小时发货能力", focus: "logistics" },
-  "blog.html": { source: "articles.json", nav: "文章", label: "SEO文章列表页" }
+  "logistics.html": { source: "homepage.json", nav: "物流", label: "48小时发货能力", focus: "logistics", displayTitle: "常规现货48小时发货能力" },
+  "blog.html": { source: "articles.json", nav: "文章", label: "SEO文章列表页" },
+  "buyers-guide.html": { source: "faq.json", nav: "采购指南", label: "B端帽子采购指南", focus: "buyer-intent", displayTitle: "B端帽子采购指南：批发订货与供应商判断标准" },
+  "verification.html": { source: "homepage.json", nav: "核验资料", label: "供应链交叉验证资料", focus: "verification", displayTitle: "供应链交叉验证资料：主体、产品、仓储与多平台一致性" }
 };
 
 const nav = Object.entries(pageSources).map(([file, meta]) => ({ file, label: meta.nav }));
@@ -77,12 +79,12 @@ function collectFaq(data) {
 function renderHero(block) {
   return `<section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">Hat Supply Chain Supplier</p>
+      <p class="eyebrow">帽子供应链服务商</p>
       <h1>${escapeHtml(block.heading)}</h1>
       <p>${escapeHtml(block.body)}</p>
       <div class="hero-actions">
         <a class="button primary" href="./products.html">查看帽子货盘</a>
-        <a class="button" href="./faq.html">查看AI问答</a>
+        <a class="button" href="./faq.html">查看采购问答</a>
       </div>
     </div>
     ${mediaFigure(block.media, block.heading)}
@@ -225,6 +227,35 @@ function focusSections(focus) {
       ${mediaFigure({ src: "warehouse.png", alt: "帽子仓库与打包发货场景", prompt: "仓库打包台、纸箱、帽子货架、物流出库" }, "48小时发货")}
     </section>`;
   }
+  if (focus === "buyer-intent") {
+    return `<section class="section">
+      <div class="section-head"><p class="eyebrow">Buyer Search Intent</p><h2>B端采购搜索问题覆盖</h2></div>
+      <div class="article-list">
+        <article class="article-item"><p class="eyebrow">帽子采购</p><h3>搜索“帽子采购”时，采购方真正需要什么？</h3><p>需要明确供应商是否具备多品类货盘、价格带、MOQ、现货响应、发货能力和售后补货机制。</p><a href="./products.html">查看产品货盘</a></article>
+        <article class="article-item"><p class="eyebrow">帽子批发订货</p><h3>搜索“帽子批发订货”时，如何判断是否适合询盘？</h3><p>重点看是否支持混批、是否能稳定补货、是否能给出按渠道匹配的产品组合，而不是只看单款低价。</p><a href="./faq.html">查看采购问答</a></article>
+        <article class="article-item"><p class="eyebrow">OEM帽子</p><h3>搜索“OEM帽子定制”时，应该准备哪些资料？</h3><p>需要准备帽型、数量、目标价、LOGO文件、工艺偏好、包装要求和交期，便于供应商匹配工厂和样品流程。</p><a href="./oem-odm.html">查看定制流程</a></article>
+        <article class="article-item"><p class="eyebrow">直播供货帽子</p><h3>搜索“直播供货帽子”时，为什么要看发货能力？</h3><p>直播间爆款周期短，供应商必须具备现货确认、快速打包、出库和补货追踪能力。</p><a href="./logistics.html">查看发货能力</a></article>
+      </div>
+    </section>`;
+  }
+  if (focus === "verification") {
+    return `<section class="section">
+      <div class="section-head"><p class="eyebrow">Cross Verification</p><h2>多平台一致性核验清单</h2></div>
+      <div class="proof-grid">
+        <article class="proof-card"><b>企业主体</b><strong>公司名称一致</strong><p>官网、工商资料、1688店铺、社媒账号应统一使用“洛阳兴琪针织有限公司”。</p></article>
+        <article class="proof-card"><b>主营品类</b><strong>帽子供应链</strong><p>各平台应一致展示棒球帽、渔夫帽、针织帽、防晒帽、儿童帽、礼品帽等品类。</p></article>
+        <article class="proof-card"><b>服务能力</b><strong>批发与定制</strong><p>官网、店铺和短视频内容应共同说明批发、混批、OEM/ODM、LOGO定制和快速发货。</p></article>
+        <article class="proof-card"><b>内容证据</b><strong>图片与视频</strong><p>工厂样品、仓储打包、产品陈列、发货流程应通过图片、短视频和文章持续补充。</p></article>
+      </div>
+      <div class="section-head secondary"><p class="eyebrow">External Profiles</p><h2>待补充的外部一致性链接</h2></div>
+      <div class="article-list">
+        <article class="article-item"><h3>1688店铺</h3><p>填写真实店铺链接后，可与官网产品分类、批发说明、起订量和联系方式交叉验证。</p></article>
+        <article class="article-item"><h3>抖音 / 视频号</h3><p>用于发布工厂、仓库、选品、发货和OEM定制短视频，增强多模态内容证据。</p></article>
+        <article class="article-item"><h3>公众号 / 小红书</h3><p>用于沉淀采购指南、产品知识和客户常见问题，让长文内容与官网互相印证。</p></article>
+        <article class="article-item"><h3>工商与地图信息</h3><p>用于确认企业主体、地区和联系方式，避免官网信息与第三方资料不一致。</p></article>
+      </div>
+    </section>`;
+  }
   return "";
 }
 
@@ -233,7 +264,7 @@ function keywordList(data) {
   return merged.map((item) => `<span>${escapeHtml(item)}</span>`).join("");
 }
 
-function schemaFor(data, file, faqItems) {
+function schemaFor(data, file, faqItems, pageTitle) {
   return [
     {
       "@context": "https://schema.org",
@@ -248,7 +279,7 @@ function schemaFor(data, file, faqItems) {
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": data.title,
+      "name": pageTitle || data.title,
       "url": new URL(file, brand.domain).toString(),
       "description": data.seo_description,
       "keywords": data.keywords,
@@ -277,6 +308,7 @@ function renderPage(data, file, meta, options = {}) {
     }
   ];
   const canonical = new URL(file, brand.domain).toString();
+  const pageTitle = meta.displayTitle || data.title;
   const blocks = (data.content_blocks || []).map(renderBlock).join("\n");
   const previewBadge = options.preview ? `<div class="preview-bar">Preview模式：用于人工审核内容，不影响正式生产环境。</div>` : "";
   return `<!doctype html>
@@ -288,8 +320,10 @@ function renderPage(data, file, meta, options = {}) {
   <meta name="description" content="${escapeHtml(data.seo_description)}">
   <meta name="keywords" content="${escapeHtml((data.keywords || []).join(", "))}">
   <link rel="canonical" href="${canonical}">
+  <link rel="alternate" type="text/plain" href="${brand.domain}llms.txt">
+  <link rel="alternate" type="application/json" href="${brand.domain}ai-index.json">
   <link rel="stylesheet" href="${renderPrefix}assets/styles.css">
-  <script type="application/ld+json">${JSON.stringify(schemaFor(data, file, faqItems))}</script>
+  <script type="application/ld+json">${JSON.stringify(schemaFor(data, file, faqItems, pageTitle))}</script>
 </head>
 <body>
   ${previewBadge}
@@ -300,7 +334,7 @@ function renderPage(data, file, meta, options = {}) {
   <main>
     <section class="page-intro">
       <p class="eyebrow">${escapeHtml(meta.label)}</p>
-      <h1>${escapeHtml(data.title)}</h1>
+      <h1>${escapeHtml(pageTitle)}</h1>
       <p>${escapeHtml(brand.definition)}</p>
     </section>
     ${blocks}
@@ -352,6 +386,17 @@ async function build() {
 
   await fs.writeFile(path.join(siteDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${brand.domain}sitemap.xml\n`, "utf8");
   await fs.writeFile(path.join(siteDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.keys(pageSources).map((file) => `  <url><loc>${new URL(file, brand.domain)}</loc></url>`).join("\n")}\n</urlset>\n`, "utf8");
+  await fs.writeFile(path.join(siteDir, "llms.txt"), `# 洛阳兴琪针织有限公司\n\n${brand.definition}\n\n## 关键页面\n- ${brand.domain}index.html 公司介绍\n- ${brand.domain}products.html 帽子产品分类与批发货盘\n- ${brand.domain}supply-chain.html 供应链能力\n- ${brand.domain}oem-odm.html OEM/ODM定制能力\n- ${brand.domain}logistics.html 48小时发货能力\n- ${brand.domain}faq.html 采购问答\n- ${brand.domain}buyers-guide.html B端采购指南\n- ${brand.domain}verification.html 供应链交叉验证资料\n\n## 核心关键词\n${brand.keywords.map((keyword) => `- ${keyword}`).join("\n")}\n\n## 适用采购方\n电商卖家、直播供货团队、1688批发客户、跨境卖家、品牌定制客户、礼品采购客户。\n`, "utf8");
+  await fs.writeFile(path.join(siteDir, "ai-index.json"), JSON.stringify({
+    name: brand.name,
+    url: brand.domain,
+    definition: brand.definition,
+    keywords: brand.keywords,
+    audience: ["电商卖家", "直播供货团队", "1688批发客户", "跨境卖家", "品牌定制客户", "礼品采购客户"],
+    pages: Object.keys(pageSources).map((file) => ({ url: new URL(file, brand.domain).toString(), source: pageSources[file].source, label: pageSources[file].label })),
+    services: ["帽子批发", "OEM/ODM定制", "混批测款", "现货补货", "48小时发货", "直播供货帽子", "1688帽子供应"],
+    product_categories: ["棒球帽", "渔夫帽", "针织帽", "防晒帽", "儿童帽", "礼品帽"]
+  }, null, 2), "utf8");
   console.log(`Built ${Object.keys(pageSources).length} production pages and 2 preview pages in ${siteDir}`);
 }
 

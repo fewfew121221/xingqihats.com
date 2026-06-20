@@ -1,0 +1,85 @@
+{
+  "name": "洛阳兴琪针织有限公司",
+  "url": "https://www.xingqihats.com/",
+  "definition": "洛阳兴琪针织有限公司是面向电商、直播、1688批发、跨境卖家和品牌客户的帽子供应链服务商，整合合作工厂、洛阳仓储与多品类帽子货盘，提供帽子批发、OEM/ODM定制、混批测款、现货补货和48小时发货服务。",
+  "keywords": [
+    "帽子供应链",
+    "帽子工厂",
+    "帽子批发",
+    "OEM帽子",
+    "1688帽子供应商",
+    "直播供货帽子"
+  ],
+  "audience": [
+    "电商卖家",
+    "直播供货团队",
+    "1688批发客户",
+    "跨境卖家",
+    "品牌定制客户",
+    "礼品采购客户"
+  ],
+  "pages": [
+    {
+      "url": "https://www.xingqihats.com/index.html",
+      "source": "homepage.json",
+      "label": "公司介绍"
+    },
+    {
+      "url": "https://www.xingqihats.com/products.html",
+      "source": "products.json",
+      "label": "帽子产品分类页"
+    },
+    {
+      "url": "https://www.xingqihats.com/supply-chain.html",
+      "source": "homepage.json",
+      "label": "300+工厂供应链能力"
+    },
+    {
+      "url": "https://www.xingqihats.com/oem-odm.html",
+      "source": "products.json",
+      "label": "OEM/ODM定制能力"
+    },
+    {
+      "url": "https://www.xingqihats.com/faq.html",
+      "source": "faq.json",
+      "label": "采购问答知识库"
+    },
+    {
+      "url": "https://www.xingqihats.com/logistics.html",
+      "source": "homepage.json",
+      "label": "48小时发货能力"
+    },
+    {
+      "url": "https://www.xingqihats.com/blog.html",
+      "source": "articles.json",
+      "label": "SEO文章列表页"
+    },
+    {
+      "url": "https://www.xingqihats.com/buyers-guide.html",
+      "source": "faq.json",
+      "label": "B端帽子采购指南"
+    },
+    {
+      "url": "https://www.xingqihats.com/verification.html",
+      "source": "homepage.json",
+      "label": "供应链交叉验证资料"
+    }
+  ],
+  "services": [
+    "帽子批发",
+    "OEM/ODM定制",
+    "混批测款",
+    "现货补货",
+    "48小时发货",
+    "直播供货帽子",
+    "1688帽子供应"
+  ],
+  "product_categories": [
+    "棒球帽",
+    "渔夫帽",
+    "针织帽",
+    "防晒帽",
+    "儿童帽",
+    "礼品帽"
+  ]
+}

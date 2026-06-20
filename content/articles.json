@@ -42,6 +42,18 @@
           "slug": "1688-hat-supplier-checklist",
           "summary": "为1688分销和电商卖家梳理帽子货盘、价格、库存、交期和售后评估标准。",
           "keywords": ["1688帽子供应商", "帽子批发", "帽子工厂"]
+        },
+        {
+          "title": "帽子批发订货前需要问供应商的10个问题",
+          "slug": "hat-wholesale-ordering-questions",
+          "summary": "围绕品类、MOQ、混批、库存、LOGO定制、包装、发货、补货和售后建立询盘问题清单。",
+          "keywords": ["帽子批发订货", "帽子采购", "帽子供应链"]
+        },
+        {
+          "title": "电商帽子货盘如何从测款走向稳定补货？",
+          "slug": "ecommerce-hat-sku-testing-restock",
+          "summary": "说明电商卖家如何用基础款、季节款和直播福利款组合降低库存风险并形成长期货盘。",
+          "keywords": ["帽子货盘", "电商帽子批发", "直播供货帽子"]
         }
       ]
     },
