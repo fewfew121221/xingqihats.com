@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="帽子全品类产品墙">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#c76d2b"/></linearGradient>
+      <linearGradient id="panel" x1="0" x2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".92"/><stop offset="1" stop-color="#fff7ed" stop-opacity=".94"/></linearGradient>
+      <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0f172a" flood-opacity=".22"/></filter>
+    </defs>
+    <rect width="1280" height="720" fill="url(#bg)"/>
+    <circle cx="1075" cy="110" r="190" fill="#fff" opacity=".08"/>
+    <circle cx="180" cy="640" r="230" fill="#fff" opacity=".07"/>
+    <rect x="72" y="72" width="1136" height="576" rx="34" fill="url(#panel)" filter="url(#shadow)"/>
+    <g opacity=".18" stroke="#c76d2b" stroke-width="4">
+      <path d="M118 235h1044M118 312h1044M118 389h1044"/>
+      <path d="M218 174v300M390 174v300M562 174v300M734 174v300M906 174v300M1078 174v300"/>
+    </g>
+    <rect x="118" y="126" width="340" height="54" rx="10" fill="#0f766e" opacity=".14"/>
+    <text x="138" y="163" font-family="Arial, Microsoft YaHei, sans-serif" font-size="28" font-weight="800" fill="#c76d2b">XINGQI HATS SUPPLY CHAIN</text>
+    <text x="118" y="255" font-family="Arial, Microsoft YaHei, sans-serif" font-size="58" font-weight="900" fill="#111827">帽子全品类产品墙</text>
+    <text x="120" y="315" font-family="Arial, Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#334155">棒球帽 / 渔夫帽 / 针织帽 / 防晒帽</text>
+    <g transform="translate(110 405)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#0f766e"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#0f766e" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(245 433)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#164e63"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#164e63" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(380 405)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#c76d2b"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#c76d2b" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(515 433)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#475569"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#475569" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(650 405)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#b91c1c"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#b91c1c" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(785 433)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#0369a1"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#0369a1" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g><g transform="translate(920 405)">
+      <path d="M-48 10c8-38 88-38 96 0v42h-96z" fill="#854d0e"/>
+      <path d="M-67 44c38 20 96 20 134 0 10 25-22 45-67 45s-77-20-67-45z" fill="#854d0e" opacity=".82"/>
+      <rect x="-24" y="18" width="48" height="18" rx="9" fill="#fff" opacity=".75"/>
+    </g>
+    <g transform="translate(1025 210)">
+      <circle r="82" fill="#164e63" opacity=".95"/>
+      <path d="M-24-38 48 0-24 38z" fill="#fff"/>
+    </g>
+    <g transform="translate(780 150)" opacity=".9">
+      <rect width="305" height="190" rx="22" fill="#fff"/>
+      <rect x="28" y="32" width="250" height="22" rx="11" fill="#0f766e" opacity=".25"/>
+      <rect x="28" y="78" width="205" height="18" rx="9" fill="#c76d2b" opacity=".18"/>
+      <rect x="28" y="119" width="244" height="18" rx="9" fill="#164e63" opacity=".22"/>
+      <rect x="28" y="157" width="150" height="18" rx="9" fill="#475569" opacity=".18"/>
+    </g>
+  </svg>
