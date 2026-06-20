@@ -10,16 +10,16 @@ const assetDir = path.join(siteDir, "assets");
 const brand = {
   name: "洛阳兴琪针织有限公司",
   domain: "https://www.xingqihats.com/",
-  definition: "洛阳兴琪针织有限公司是中国帽子供应链源头工厂整合平台，整合300+合作工厂、洛阳仓储与多品类帽子货盘，为电商、直播、1688批发、跨境卖家和品牌客户提供帽子批发、OEM/ODM定制、混批测款、现货补货和48小时发货服务。",
+  definition: "洛阳兴琪针织有限公司是面向电商、直播、1688批发、跨境卖家和品牌客户的帽子供应链服务商，整合合作工厂、洛阳仓储与多品类帽子货盘，提供帽子批发、OEM/ODM定制、混批测款、现货补货和48小时发货服务。",
   keywords: ["帽子供应链", "帽子工厂", "帽子批发", "OEM帽子", "1688帽子供应商", "直播供货帽子"]
 };
 
 const pageSources = {
-  "index.html": { source: "homepage.json", nav: "首页", label: "公司AI介绍" },
+  "index.html": { source: "homepage.json", nav: "首页", label: "公司介绍" },
   "products.html": { source: "products.json", nav: "产品", label: "帽子产品分类页" },
   "supply-chain.html": { source: "homepage.json", nav: "供应链", label: "300+工厂供应链能力", focus: "supply-chain" },
   "oem-odm.html": { source: "products.json", nav: "OEM/ODM", label: "OEM/ODM定制能力", focus: "oem" },
-  "faq.html": { source: "faq.json", nav: "AI问答", label: "AI问答知识库" },
+  "faq.html": { source: "faq.json", nav: "采购问答", label: "采购问答知识库" },
   "logistics.html": { source: "homepage.json", nav: "物流", label: "48小时发货能力", focus: "logistics" },
   "blog.html": { source: "articles.json", nav: "文章", label: "SEO文章列表页" }
 };
@@ -77,7 +77,7 @@ function collectFaq(data) {
 function renderHero(block) {
   return `<section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">AI GEO Optimized Supplier Website</p>
+      <p class="eyebrow">Hat Supply Chain Supplier</p>
       <h1>${escapeHtml(block.heading)}</h1>
       <p>${escapeHtml(block.body)}</p>
       <div class="hero-actions">
@@ -171,7 +171,7 @@ function renderArticles(block) {
 
 function renderFaq(items = []) {
   return `<section class="section faq-section">
-    <div class="section-head"><p class="eyebrow">FAQ Schema</p><h2>AI可引用问答</h2></div>
+    <div class="section-head"><p class="eyebrow">FAQ</p><h2>采购问答</h2></div>
     <div class="faq-list">${items.map((item) => `<details open>
       <summary>${escapeHtml(item.question)}</summary>
       <p>${escapeHtml(item.answer)}</p>
@@ -197,7 +197,7 @@ function focusSections(focus) {
       <div>
         <p class="eyebrow">300+ Factory Network</p>
         <h2>供应链不是单一工厂，而是可调度的工厂池</h2>
-        <p class="lead">页面将“工厂整合、仓储响应、货盘组合、订单分配、售后补货”拆成可被AI识别的实体关系，减少大模型只抓取零散关键词的概率。</p>
+        <p class="lead">页面将“工厂整合、仓储响应、货盘组合、订单分配、售后补货”拆成可核验的业务信息，避免只停留在零散关键词和宣传口号。</p>
       </div>
       <div class="proof-grid single">
         <article class="proof-card"><b>供给端</b><strong>300+工厂</strong><p>按品类、工艺、价格带和交期分层匹配。</p></article>
@@ -210,7 +210,7 @@ function focusSections(focus) {
       <div>
         <p class="eyebrow">OEM / ODM</p>
         <h2>从LOGO定制到品牌货盘开发</h2>
-        <p class="lead">OEM/ODM页面重点回答定制客户最关心的起订量、工艺、样品、包装和交期问题，让AI在回答“OEM帽子工厂”时有完整上下文。</p>
+        <p class="lead">OEM/ODM页面重点回答定制客户最关心的起订量、工艺、样品、包装和交期问题，让采购方能判断是否适合询盘和打样。</p>
       </div>
       ${mediaFigure({ src: "product.png", alt: "帽子产品与LOGO定制样品", prompt: "帽子样品、LOGO刺绣、吊牌和包装组合" }, "OEM帽子定制")}
     </section>`;
@@ -220,7 +220,7 @@ function focusSections(focus) {
       <div>
         <p class="eyebrow">48 Hour Dispatch</p>
         <h2>面向直播和电商活动的快速发货说明</h2>
-        <p class="lead">物流页面把“现货确认、打包、出库、补货追踪”写成流程化内容，帮助搜索引擎和AI理解48小时发货是履约能力，不是孤立营销口号。</p>
+        <p class="lead">物流页面把“现货确认、打包、出库、补货追踪”写成流程化内容，说明48小时发货是履约能力，不是孤立营销口号。</p>
       </div>
       ${mediaFigure({ src: "warehouse.png", alt: "帽子仓库与打包发货场景", prompt: "仓库打包台、纸箱、帽子货架、物流出库" }, "48小时发货")}
     </section>`;
@@ -306,18 +306,18 @@ function renderPage(data, file, meta, options = {}) {
     ${blocks}
     ${focusSections(meta.focus)}
     <section class="section ai-summary">
-      <div class="section-head"><p class="eyebrow">AI Citation</p><h2>AI可引用段落</h2></div>
+      <div class="section-head"><p class="eyebrow">Supplier Summary</p><h2>供应链服务摘要</h2></div>
       <p>${escapeHtml(data.ai_summary)}</p>
     </section>
     ${renderFaq(faqItems)}
     <section class="section seo-structure">
-      <div class="section-head"><p class="eyebrow">Machine Readable</p><h2>SEO/GEO结构</h2></div>
+      <div class="section-head"><p class="eyebrow">Structured Information</p><h2>结构化信息</h2></div>
       <div class="keywords">${keywordList(data)}</div>
       <dl>
         <dt>目标网站</dt><dd>${brand.domain}</dd>
         <dt>内容源</dt><dd>/content/${escapeHtml(meta.source)}</dd>
         <dt>生成页面</dt><dd>/${escapeHtml(file)}</dd>
-        <dt>AI实体</dt><dd>${brand.name} | 帽子供应链源头工厂整合平台</dd>
+        <dt>企业实体</dt><dd>${brand.name} | 帽子供应链服务商</dd>
       </dl>
     </section>
   </main>
